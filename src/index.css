@@ -1,13 +1,101 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* base styling */
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(210, 229, 245);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.board {
+  margin-top: 5vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-auto-rows: auto;
+}
+
+.game-area {
+  margin: auto;
+  margin-top: 5vh;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-auto-rows: auto;
+}
+
+.cell {
+  border-radius: 0%;
+  height: 17vh;
+  width: 17vh;
+  cursor: pointer;
+  background-color: white;
+  font-size: 15vh;
+}
+
+.cell:hover {
+  background-color: rgb(153, 208, 253);
+}
+
+.X {
+  color: blue;
+}
+
+.O {
+  color: red;
+}
+
+.score-area {
+  border: 0.1rem solid black;
+  background-color: white;
+  font-size: 4vh;
+  margin-top: 5vh;
+  width: 30vw;
+  text-align: center;
+  height: 51vh;
+}
+
+.score-area p {
+  background-color: transparent;
+}
+
+.game-info {
+  font-size: 1.5vw;
+}
+
+.play-again {
+  background-color: rgb(210, 229, 245);
+  border-radius: 20%;
+  height: 10vh;
+  width: fit-content;
+  margin-top: 1vh;
+  font-size: 4vh;
+  cursor: pointer;
+}
+
+.play-again:hover {
+  background-color: rgb(153, 208, 253);
+}
+
+@media only screen and (max-width: 960px) {
+  .xs-screen {
+    display: flex;
+    flex-direction: column;
+  }
+  .score-area {
+    width: 97%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 40vh;
+    font-size: 3vh;
+  }
+  .game-area {
+    margin-top: 0%;
+    width: 97%;
+  }
+  .board {
+    margin-top: 0%;
+  }
+  .play-again {
+    margin-top: 0%;
+  }
+  .game-info {
+    font-size: 3vh;
+  }
 }
