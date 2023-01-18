@@ -25,8 +25,8 @@
   height: 17vh;
   width: 17vh;
   cursor: pointer;
-  background-color: white;
   font-size: 15vh;
+  background-color: white;
 }
 
 .cell:hover {
@@ -42,7 +42,7 @@
 }
 
 .score-area {
-  border: 0.1rem solid black;
+  border: 0.15rem solid black;
   background-color: white;
   font-size: 4vh;
   margin-top: 5vh;

@@ -46,7 +46,7 @@ const GamePanel = () => {
     squares.forEach((square) => {
       square.state = null;
     });
-    setIsX(!isX);
+    setIsX(isX);
   };
 
   return (
@@ -56,7 +56,11 @@ const GamePanel = () => {
         <p>SCORE</p>
         <p className="X">X: {XWins}</p>
         <p className="O">O: {OWins}</p>
-        <button className="play-again" onClick={() => playAgain()}>
+        <button
+          className="play-again"
+          onClick={() => playAgain()}
+          disabled={!gameOver}
+        >
           Play again
         </button>
         <p className="game-info">{gameOver ? displayText(winner) : ""}</p>
