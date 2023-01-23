@@ -51,7 +51,15 @@ const GamePanel = () => {
 
   return (
     <div className="board xs-screen">
-      <div className="game-area">{buttons}</div>
+      <div>
+        <div className="next-up">
+          Next up:{" "}
+          <label className={isX ? "player X" : "player O"}>
+            {isX ? "X" : "O"}
+          </label>
+        </div>
+        <div className="game-area">{buttons}</div>
+      </div>
       <div className="score-area">
         <p>SCORE</p>
         <p className="X">X: {XWins}</p>
