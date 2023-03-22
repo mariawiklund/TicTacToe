@@ -4,6 +4,17 @@
   background-color: rgb(210, 229, 245);
 }
 
+.main-menu {
+  background-color: aliceblue;
+  padding: 1%;
+  width: 10vw;
+}
+
+.main-menu:hover {
+  background-color: rgb(153, 208, 253);
+}
+
+/* GAME BOARD */
 .board {
   margin-top: 3vh;
   display: grid;
@@ -31,7 +42,7 @@
   padding: 0.5rem;
 }
 
-.player {
+.transparent {
   background-color: transparent;
 }
 
@@ -71,12 +82,11 @@
 }
 
 .game-info {
-  font-size: 1.5vw;
+  font-size: 3vw;
 }
 
 .play-again {
   background-color: rgb(210, 229, 245);
-  border-radius: 20%;
   height: 10vh;
   width: fit-content;
   margin-top: 1vh;
@@ -88,6 +98,7 @@
   background-color: rgb(153, 208, 253);
 }
 
+/* FOR PHONES */
 @media only screen and (max-width: 960px) {
   .xs-screen {
     display: flex;
@@ -118,4 +129,50 @@
     font-size: 3vh;
     margin-top: 1vh;
   }
+
+  .main-menu {
+    width: 100%;
+    margin-bottom: 1vh;
+    height: 6vh;
+    font-size: 3vh;
+  }
+}
+
+/* START PAGE */
+.start-area {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  font-size: 4vh;
+  border: 0.15rem solid black;
+  background-color: white;
+  width: 50vw;
+  height: 30vh;
+  padding: 0.5rem;
+}
+
+.start-btns {
+  background-color: white;
+}
+
+.start-area p {
+  background-color: transparent;
+}
+
+.start-area button {
+  background-color: rgb(210, 229, 245);
+  height: 7vh;
+  width: fit-content;
+  margin-top: 1vh;
+  font-size: 4vh;
+  cursor: pointer;
+}
+
+.start-area button:hover {
+  background-color: rgb(153, 208, 253);
+}
+
+.divider {
+  margin-right: 2vw;
 }
