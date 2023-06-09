@@ -1,6 +1,8 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
+import Button from "./components/Button";
+
 const Board = ({ bot }) => {
   const navigate = useNavigate();
   const [squares] = useState(CreateButtons());
@@ -64,9 +66,13 @@ const Board = ({ bot }) => {
 
   return (
     <div>
-      <button className="main-menu" onClick={() => navigate("/start")}>
-        Main menu
-      </button>
+      <div className="main-menu">
+        <Button
+          text={"Main menu"}
+          onClick={() => navigate("/start")}
+          mode={"light"}
+        />
+      </div>
       <div className="board xs-screen">
         <div>
           <div className="next-up">
@@ -85,13 +91,17 @@ const Board = ({ bot }) => {
           <p>
             <label className="transparent O">O:</label> {OWins}
           </p>
-          <button
-            className="play-again"
-            onClick={() => reset()}
-            disabled={!gameOver}
-          >
-            Play again
-          </button>
+          <div className="play-again">
+            {gameOver ? (
+              <Button
+                text={"Play again"}
+                onClick={() => reset()}
+                mode={"dark"}
+              />
+            ) : (
+              ""
+            )}
+          </div>
           <p className="game-info">{gameOver ? displayText(winner) : ""}</p>
         </div>
       </div>
